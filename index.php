@@ -131,6 +131,7 @@ chdir( $target_folder  )
       print " <a href=\"?".$_SERVER['QUERY_STRING']."&depth=1\">(hide plots in subfolders)</a>\n";
     }
     print "</h2>\n";
+    natsort($folders);
     foreach ($folders as $filename) {
       print " <a href=\"$filename\">[$filename]</a>";
     }
@@ -271,7 +272,19 @@ if ($_GET['noplots']) {
 <h2><a name="files">Other files</a></h2>
 <ul>
 <?php
-usort($allfiles, create_function('$a,$b', 'return (is_dir($b) - is_dir($a));'));
+// Directories goes first
+$dirs = array();
+foreach ($allfiles as $filename) {
+  if (is_dir($filename)) {
+    array_push($dirs, $filename);
+  }
+}
+natsort($dirs);
+foreach ($dirs as $filename) {
+  print "<li>[DIR] <a href=\"$filename\">$filename</a></li>";
+}
+// Files come next
+natsort($allfiles);
 foreach ($allfiles as $filename) {
   if ($_GET['noplots'] || !in_array($filename, $displayed)) {
     /// if (isset($_GET['match']) && !fnmatch('*'.$_GET['match'].'*', $filename)) continue;
@@ -281,7 +294,7 @@ foreach ($allfiles as $filename) {
   }
   if ( substr($filename,-1) == "~" ) continue;
   if (is_dir($filename)) {
-    print "<li>[DIR] <a href=\"$filename\">$filename</a></li>";
+    continue;
   } else {
     print "<li><a href=\"$filename\">$filename</a></li>";
   }
