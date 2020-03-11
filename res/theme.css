@@ -4,24 +4,18 @@ body {
        left : 5%;
        padding: 0px;
        margin: 0px;
-       font-family: arial, helvetica;
+       font-family: "Open Sans", arial, helvetica;
        font-weight: 600; 
        font-size: 15px;
        border-color : #2E457B;
-       color : #43307F;
-       background-image:url('background.png');
-       /* background : #DEF5AD; */
-	
+       color : #4e9a06;
 }
 
 #header {
           text-align: center;
           float: left; 
-          /*width: 50%;
-          padding-left: 12%; 
-             */
           width: 76%;
-          padding-left: 12%;        
+          padding-left: 12%;
           padding-top: 0.5ex;
           color : #3B8686;
 }
@@ -60,12 +54,12 @@ body {
           border : 2px solid #2E457B;
 } 
 
-a { 
-    color: #1B9898;
+a {
+    color: #204a87;
     text-decoration:  none;
 }
 
-a:hover { 
+a:hover {
           color: #24CACA;
           background: #1B9898;
 
@@ -76,17 +70,17 @@ hr.line {
           height: 1px;
 }
 
-#content li { 
+#content li {
      color : #3B8686; 
      padding-bottom: 1ex;
 }
 
-#content li ul li { 
+#content li ul li {
            color : #43307F;
            padding-bottom: 0.5ex;
 }
 
-li em { 
+li em {
      text-decoration : underline;
      color: #246E6E;
  }
@@ -126,13 +120,13 @@ li em {
 }
 
 
-#header a { 
-	color: inherit; 
+#header a {
+      color: inherit;
 }
 
 #header a:hover { 
-	text-decoration : underline;
-	background : inherit;
+      text-decoration : underline;
+      background : inherit;
 }
 
 .feed_description {
@@ -141,9 +135,9 @@ li em {
      opacity: 1;
      -moz-opacity:1;
      position: absolute; 
-	top : inherit;
-	left : 70%;
-	width : 30%;
+     top : inherit;
+     left : 70%;
+     width : 30%;
      background : #FFFFFF;
      padding : 0.5ex;	 
          border-color : #2E457B;
@@ -154,33 +148,33 @@ li em {
          border-radius: 2ex;
 }
 
-#navbar a { 
+#navbar a {
               color: orange;
 }
 
 .feed_description img {
-	width : 100%;
+      width : 100%;
 }
 
 .feed:hover {
-        color: #24CACA;
-	background: #1B9898;
+      color: #24CACA;
+      background: #1B9898;
 }
 
 .feed:hover  .feed_description {
-	display : block;
+      display : block;
 }
 
 .feed_description:hover{
-	display : block;
+      display : block;
 }
 
 .rnd_feed {
     height : 10%;
 }
 
-code {   
-       color: #bdc820;
+code {
+      color: #bdc820;
 }
 
 /* ]]> */

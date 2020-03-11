@@ -31,7 +31,7 @@ div.pic {
     position:relative;
 }
 
-div.dirlinks h2 {  margin-bottom: 4pt; margin-left: -24pt; color: rgb(80,0,0);  }
+div.dirlinks h2 {  margin-bottom: 4pt; margin-left: -24pt; color: #A40000;  }
 div.dirlinks {  margin: 0 24pt; } 
 div.dirlinks a {
     font-size: 11pt; font-weight: bold;
